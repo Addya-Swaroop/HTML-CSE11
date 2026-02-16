@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel Booking Form</title>
+
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+        background-color: #a8c9eb;
+
+}
+
+.container {
+    width: 55vw;
+    margin: 8vh auto;
+    background: #fafbd8;
+    padding: 4vh 4vw;
+    border-radius: 2rem;
+    box-shadow: 0 1.5vh 3vh rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 4vh;
+    font-size: 2rem;
+    color: #2c3e50;
+    letter-spacing: 0.05em;
+}
+
+label {
+    display: block;
+    margin-top: 2vh;
+    font-weight: 600;
+    color: #34495e;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 1em;
+    margin-top: 1vh;
+    border-radius: 1rem;
+    border: 0.1rem solid #1e3b58;
+    background: #ffffff;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.date-row {
+    display: flex;
+    gap: 10vw;
+}
+
+.date-row div {
+    width: 50%;
+}
+
+.button-row {
+    display: flex;
+    gap: 2vw;
+    margin-top: 4vh;
+}
+
+.primary-btn {
+    flex: 1;
+    padding: 1em;
+    border: none;
+    border-radius: 1rem;
+    background: #2c3e50;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    flex: 1;
+    padding: 1em;
+    border-radius: 1rem;
+    background: #95a5a6;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background: #1f2d3a;
+}
+
+.secondary-btn:hover {
+    background: #7f8c8d;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Hotel Room Booking</h2>
+
+    <form>
+        <label>Full Name:</label>
+        <input type="text">
+
+        <label>Email:</label>
+    <input type="email" pattern="[a-zA-Z0-9._%+-]+@gmail\.com" 
+               title="Please enter a valid Gmail address" required>
+        <label>Phone:</label>
+        <input type="tel">
+
+        <div class="date-row">
+            <div>
+                <label>Check-in Date:</label>
+                <input type="date">
+            </div>
+
+            <div>
+                <label>Check-out Date:</label>
+                <input type="date">
+            </div>
+        </div>
+
+        <label>Room Type:</label>
+        <select>
+            <option>Single Room</option>
+            <option>Double Room</option>
+            <option>Deluxe Room</option>
+            <option>Suite</option>
+        </select>
+
+        <label>Number of Guests:</label>
+        <input type="number">
+
+        <label>Special Requests:</label>
+        <textarea rows="4"></textarea>
+
+        <div class="button-row">
+            <button type="submit" class="primary-btn">Book Now</button>
+            <button type="reset" class="secondary-btn">Reset</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
